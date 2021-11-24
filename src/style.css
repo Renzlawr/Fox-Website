@@ -1,0 +1,381 @@
+body {
+    background-color: rgb(255, 123, 0);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.light-mode {
+    --lighter-gray: rgb(228, 228, 228);
+    --darker-gray: rgb(240, 240, 240);
+    --darkest-gray: white;
+}
+
+:root {
+    --lighter-gray: rgb(20, 20, 20);
+    --darker-gray: rgb(15, 15, 15);
+    --darkest-gray: rgb(12, 12, 12);
+}
+
+#bars {
+    color: rgb(255, 123, 0);
+}
+
+#switch {
+    position: absolute;
+    left: 5%;
+}
+
+input[type='checkbox'] {
+    -webkit-appearance: none;
+    position: relative;
+    background-color: rgb(255, 123, 0);
+    width: 20px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+}
+
+input[type='checkbox']::before {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: rgb(44, 44, 44);
+    transform: scale(1.1);
+    transition: 0.7s ease all;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+input:checked[type='checkbox']::before {
+    background-color: rgb(228, 228, 228);
+    bottom: 30px;
+}
+
+#navbar {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--lighter-gray);
+    padding: 5px 0 5px 0;
+    position: fixed;
+    border-bottom:rgb(255, 123, 0) solid 10px;
+    z-index: 3;
+}
+
+.hamburger {
+    color:rgb(255, 123, 0)
+}
+
+.nav-links {
+    color: rgb(255, 123, 0);
+    text-transform: uppercase;
+    font-family: Verdana;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 30px 0 0;
+    animation-duration: 1.5s;
+    animation-name: slidelink;
+}
+
+@keyframes slidelink {
+    from {
+        margin-right: 5%;
+        opacity: 0%;
+    }
+
+    to {
+        margin-right: 30px;
+        opacity: 100%
+    }
+}
+
+.link {
+    margin: 0 25px 0 25px;
+}
+
+.links {
+    text-decoration: none;
+    color:rgb(255, 123, 0)
+}
+
+.links:hover {
+    color:rgb(189, 91, 0)
+}
+
+#fox {
+    height: 60px;
+    width: 60px;
+    margin: 0 0 0 25px;
+    border-radius: 30px;
+}
+
+#big-box {
+    justify-content: center;
+    display: flex;
+    margin-top: 80px;
+}
+
+#side-left {
+    height: 91vh;
+    width: 360px;
+    background-color: var(--lighter-gray);
+    margin: 10px 0 0 0;
+    display: flex;
+    font-family: Verdana;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titles {
+    color:rgb(189, 91, 0);
+    margin: 75px 0 25px 0;
+}
+
+.side-desc {
+    text-align: center;
+    color:rgb(255, 123, 0);
+    font-family: Verdana;
+    width: 250px;
+    line-height: 300%;
+}
+
+.dark-text {
+    color: rgb(184, 184, 184);
+    font-weight: bold;
+    background: none;
+}
+
+#hero {
+    background-color: var(--darker-gray);
+    width: 1200px;
+    height: 91vh;
+    margin: 10px 0 0 0;
+    font-family: Verdana;
+}
+
+#big-fox {
+    animation-duration: 3s;
+    animation-name: foxslide
+}
+
+@keyframes foxslide {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+#side-right {
+    height: 91vh;
+    width: 360px;
+    background-color: var(--lighter-gray);
+    margin: 10px 0 0 0;
+    display: flex;
+    font-family: Verdana;
+    flex-direction: column;
+    align-items: center;
+}
+
+#right-desc {
+    line-height: 200%;
+    animation-duration: 1.5s;
+    animation-name: slideright
+}
+
+@keyframes slideright {
+    from {
+        margin-left: 15%;
+        opacity: 30%;
+    }
+
+    to {
+        margin-left: 0px;
+        opacity: 100%;
+    }
+}
+
+#left-desc {
+    animation-duration: 1.5s;
+    animation-name: slideleft
+}
+
+@keyframes slideleft {
+    from {
+        margin-right: 15%;
+        opacity: 30%;
+    }
+
+    to {
+        margin-right: 0px;
+        opacity: 100%;
+    }
+}
+
+#header {
+    color: rgb(189, 91, 0);
+    text-align: center;
+    margin: 15px 0 0 0;
+    padding: 40px;
+}
+
+#image-box {
+    justify-content: center;
+    display: flex;
+}
+
+#desc {
+    color:rgb(255, 123, 0);
+    text-align: center;
+    margin: 60px 30% 0 30%;
+    line-height: 140%;
+}
+
+#main {
+    background-color: var(--darkest-gray);
+    width: 100%;
+    height: 2200px;
+    margin: 10px 0 0 0;
+}
+
+.text {
+    font-family: Verdana;
+    color: rgb(255, 123, 0);
+    margin: 60px;
+    text-align: center;
+}
+
+.image {
+    height: 320px;
+    width: 512px;
+    border-radius: 25px;
+}
+
+.fox-1 {
+    justify-content: flex-start;
+    display: flex;
+    width: 68vw;
+    float: left;
+    margin: 100px 0 0 40px;
+    align-items: center;
+}
+
+.animateRight {
+    animation-name: imageRight;
+    animation-duration: 2s;
+}
+
+@keyframes imageRight {
+    from {
+        margin: 100px 0 0 0;
+        opacity: 0;
+    }
+    to{
+        margin: 100px 0 0 40px;
+        opacity: 100%;
+    }
+}
+
+.fox-2 {
+    justify-content: flex-end;
+    display: flex;
+    width: 68vw;
+    float: right;
+    margin: 100px 40px 0 0;
+    align-items: center;
+}
+
+.animateLeft {
+    animation-name: imageLeft;
+    animation-duration: 2s;
+}
+
+@keyframes imageLeft {
+    from {
+        margin: 100px 0 0 0;
+        opacity: 0;
+    }
+    to{
+        margin: 100px 40px 0 0;
+        opacity: 100%;
+    }
+}
+
+#foot {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#footlist {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    font-family: Verdana;
+    text-transform: uppercase;
+}
+
+.footlink {
+    color: black;
+    text-decoration: none;
+}
+
+.footlink:hover {
+    color:white;
+}
+
+.foottext {
+    margin: 0 45px 0 45px;
+}
+
+#icon-box {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#made-with {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.icons {
+    margin: 0 25px 0 25px;
+}
+
+body::-webkit-scrollbar {
+    width: .5em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--darkest-gray);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:rgb(255, 123, 0);
+    border-radius: 25px;
+}
+
+@keyframes animateinleft {
+    from {
+        translate: 50px, 50px;
+    }
+
+    to {
+        translate: 0, 0;
+    }
+}
